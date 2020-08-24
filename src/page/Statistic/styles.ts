@@ -114,6 +114,11 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontFamily: 'Poppins_600SemiBold',
   },
+  titleBoxAll:{
+    fontSize: 17,
+    color: '#FFF',
+    fontFamily: 'Poppins_600SemiBold',
+  },
   resultBox: {
     fontSize: 24,
     fontFamily: 'Poppins_600SemiBold',
@@ -123,10 +128,23 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent: 'space-between',
     paddingHorizontal: 25,
-    marginTop: 14
+    marginTop: 14,
   },
   boxThreeOne:{
     width: 100,
+    height:100,
+    backgroundColor:"#4CD97B",
+    justifyContent:'space-between',
+    alignItems: 'flex-start',
+    borderRadius: 13,
+    paddingHorizontal:14,
+    paddingTop: 10,
+    paddingBottom: 5,
+  },
+
+  boxThreeOneAll:{
+    width: '100%',
+    
     height:100,
     backgroundColor:"#4CD97B",
     justifyContent:'space-between',
@@ -163,6 +181,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'Poppins_600SemiBold',
   },
+  resultBoxSmallAll:{
+    color: '#FFF',
+    fontSize: 25,
+    fontFamily: 'Poppins_600SemiBold',
+  },
   dailyNewCases:{
     flex:1,
     backgroundColor: '#FFF',
@@ -175,6 +198,13 @@ const styles = StyleSheet.create({
   textDaily:{
     fontSize: 20,
     fontFamily: 'Poppins_600SemiBold',
+  },
+  chart:{
+    // backgroundColor: '#CCC',
+    alignItems:'center',
+    // position: 'absolute',
+    // paddingTop: '-100%'
+    
   }
 
 });

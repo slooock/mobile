@@ -8,9 +8,10 @@ import styles from './styles';
 import TabBar from '../../components/TabBar/TabBar';
 import HomePage from '../HomePage/HomePage';
 import Statistic from '../Statistic/Statistic';
+import InformationPage from '../Information/InformationPage';
 
 function GeralPage(){
-  const [indice, setIndice] = useState(2);
+  const [indice, setIndice] = useState(4);
   
   function funcaoPai(indice: number){
     setIndice(indice);
@@ -20,6 +21,7 @@ function GeralPage(){
     <View style={styles.flexOne}>
       {indice ===1 && (<HomePage/>)}
       {indice ===2 && (<Statistic/>)}
+      {indice ===4 && (<InformationPage/>)}
       
       {/* <Statistic/> */}
       <TabBar indice={indice} changeIndice={funcaoPai}/>

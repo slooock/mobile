@@ -12,8 +12,20 @@ import xmlid15 from '../../assets/XMLID-15.png';
 import xmlid80 from '../../assets/XMLID-80.png';
 import group from '../../assets/Group.png';
 import group32 from '../../assets/Group-32.png';
+import {Linking} from 'expo';
+import * as SMS from 'expo-sms';
 
 function HomePage() {
+  const callNow = async () => {
+    let result = await Linking.openURL('tel:192');
+  };
+
+  const btnSMSClicked = async () => {
+    //await this.askLKermissionsAsync();
+    //let result = await Linking.openURL('sms:0609690005');
+    // await this.askSMSPermissionsAsync();
+    let result = await SMS.sendSMSAsync(['192'], 'I need heelp');
+  };
 
   const styles = stylesFunction();
   return (
@@ -50,13 +62,13 @@ function HomePage() {
 
 
         <View style={styles.buttons}>
-          <RectButton style={styles.buttonsInto}>
+          <RectButton style={styles.buttonsInto} onPress={()=>{callNow();}}>
             <Image
               source={phoneIcon}
             />
             <Text style={styles.textButton}>Call Now</Text>
           </RectButton>
-          <RectButton style={styles.buttonsIntoSMS}>
+          <RectButton style={styles.buttonsIntoSMS} onPress={()=>{btnSMSClicked()}}>
             <Image
               source={messageIcon}
             />
